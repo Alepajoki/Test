@@ -1,10 +1,12 @@
 #include <iostream>
 
+#include "F:/Dropbox/FrisBee/fileinterface.hh"
+
 using namespace std;
 
 int main()
 {
-    cout << "Hello World Git!" << endl;
-    return 0;
+    FileInterface FileInter;
+    vector<vector<string> > PlayerDB;
+    PlayerDB = FileInter.ReadDB("d_PLAYERS");
 }
-
