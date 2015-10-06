@@ -1,0 +1,5 @@
+#ifndef FILEINTERFACE_HH
+#define FILEINTERFACE_HH
+
+#endif // FILEINTERFACE_HH
+
