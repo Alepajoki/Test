@@ -1,6 +1,6 @@
 #include <iostream>
 
-#include "F:/Dropbox/FrisBee/fileinterface.hh"
+#include "fileinterface.hh"
 
 using namespace std;
 
