@@ -5,6 +5,7 @@
 #include <string>
 #include <vector>
 #include <fstream>
+#include <map>
 
 using namespace std;
 
@@ -16,7 +17,7 @@ public:
     FileInterface();
     ~FileInterface();
 
-    vector<vector<string> > ReadDB(const string& db);
+    map<string,string> ReadDB(const string& db);
     vector<string> GetDataInstances(string const& Row);
 };
 

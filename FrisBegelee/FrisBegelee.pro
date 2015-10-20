@@ -4,11 +4,13 @@ CONFIG -= app_bundle
 CONFIG -= qt
 
 SOURCES += main.cc \
-    fileinterface.cc
+    fileinterface.cc \
+    ui.cc
 
 include(deployment.pri)
 qtcAddDeployment()
 
 HEADERS += \
-    fileinterface.hh
+    fileinterface.hh \
+    ui.hh
 

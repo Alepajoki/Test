@@ -10,9 +10,9 @@ FileInterface::~FileInterface()
 
 }
 
-vector<vector<string> > FileInterface::ReadDB(const string& db)
+map<string,string> FileInterface::ReadDB(const string& db)
 {
-    vector<vector<string> > dbInMemory;
+    map<string,string> dbInMemory;
     ifstream File;
     File.open(db.c_str());
 
@@ -20,7 +20,8 @@ vector<vector<string> > FileInterface::ReadDB(const string& db)
     for(int RowCount = 0;getline(File,Row);RowCount++)
     {
         vector<string> DataInstances = GetDataInstances(Row);
-        dbInMemory.push_back(DataInstances);
+        pair<string,string> DataPair = make_pair(DataInstances[0],DataInstances[1]);
+        dbInMemory.insert(DataPair);
     }
 
     File.close();
