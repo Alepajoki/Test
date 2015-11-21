@@ -48,3 +48,20 @@ vector<string> FileInterface::GetDataInstances(string const& Row)
     return rowInstances;
 }
 
+void FileInterface::AddPlayerToDB(
+        map<string,string>& dbInMemory,
+        string const& dbFile,
+        string const& name)
+{
+    //To memory
+    pair<string,string> DataPair = make_pair(name,"0");
+    dbInMemory.insert(DataPair);
+
+    //To file
+    ofstream File;
+    File.open(dbFile.c_str(),ios_base::app|ios::out);
+    File << name << '|' << "0|\n";
+    File.close();
+
+    return;
+}

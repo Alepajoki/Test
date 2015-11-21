@@ -19,6 +19,7 @@ public:
 
     map<string,string> ReadDB(const string& db);
     vector<string> GetDataInstances(string const& Row);
+    void AddPlayerToDB(map<string,string>& dbInMemory, const string &dbFile, string const& name);
 };
 
 #endif // FILEINTERFACE_HH

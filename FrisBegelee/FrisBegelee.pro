@@ -12,5 +12,6 @@ qtcAddDeployment()
 
 HEADERS += \
     fileinterface.hh \
-    ui.hh
+    ui.hh \
+    constants.h
 

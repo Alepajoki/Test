@@ -13,6 +13,8 @@ public:
     ui();
 
     void PrintPlayers(map<string,string>& DB);
+    void ClearScreen(int value);
+    string AskPlayerName();
 };
 
 #endif // UI_H
